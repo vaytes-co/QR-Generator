@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Generator by VAYTES</title>
+    <link rel="icon" type="image/png" href="assets/img/Logo-Vaytes.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/qr-code-styling@1.5.0/lib/qr-code-styling.js"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex flex-col justify-between items-center p-4 font-sans">
+
+    <!-- Container Utama -->
+    <div class="my-auto w-full max-w-md">
+        <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+            <h1 class="text-2xl font-bold text-center text-gray-800 mb-6">QR Code Generator</h1>
+            
+            <!-- Input Link -->
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-medium mb-2" for="urlInput">
+                    Masukkan Link / URL
+                </label>
+                <input id="urlInput" type="url" placeholder="https://contoh.com" 
+                    class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm">
+            </div>
+
+            <!-- Input Logo di Tengah -->
+            <div class="mb-6">
+                <label class="block text-gray-700 text-sm font-medium mb-2" for="imageInput">
+                    Tambah Logo di Tengah (Opsional)
+                </label>
+                <input id="imageInput" type="file" accept="image/png, image/jpeg" 
+                    class="w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-medium file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100 cursor-pointer">
+            </div>
+
+            <!-- Tombol Generate -->
+            <button id="generateBtn" 
+                class="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2.5 px-4 rounded-lg transition duration-200">
+                Buat QR Code
+            </button>
+
+            <!-- Tempat QR Code Tampil -->
+            <div id="qr-container" class="mt-6 flex justify-center hidden"></div>
+
+            <!-- Tombol Download -->
+            <button id="downloadBtn" 
+                class="w-full mt-4 bg-emerald-600 hover:bg-emerald-700 text-white font-medium py-2.5 px-4 rounded-lg transition duration-200 hidden">
+                Unduh QR Code
+            </button>
+        </div>
+
+        <!-- Footer Promosi (Natural & Minimalis) -->
+        <footer class="mt-6 text-center text-xs text-gray-500 space-y-1">
+            <p>Developed by <span class="font-semibold text-gray-700">VAYTES</span></p>
+            <p>Butuh website custom untuk bisnismu? <a href="https://www.instagram.com/vaytes.co?stkn=MWV1eGdteDU5bDZrOA%3D%3D&utm_source=qr" target="_blank" class="text-blue-600 hover:underline font-medium">@vaytes.co</a></p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
